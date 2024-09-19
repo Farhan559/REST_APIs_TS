@@ -14,6 +14,7 @@ app.use(express_1.default.json());
 app.use(log_1.logger);
 app.use("/health", routes_1.healthRouter);
 app.use("/calculator", routes_1.calculatorRouter);
+app.use(middleware_1.errorHandler);
 app.listen(port, () => {
     console.log(`App is running at http://localhost:${port}`);
 });
