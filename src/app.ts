@@ -6,6 +6,7 @@ import { addTimestamp } from "./middleware";
 const app = express();
 const port = 3000;
 app.use(addTimestamp);
+app.use(express.json());
 app.use(logger);
 
 app.use("/health", healthRouter);
